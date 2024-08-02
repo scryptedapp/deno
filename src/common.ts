@@ -5,13 +5,13 @@ import { https } from 'follow-redirects';
 export const artifactDirectory = path.join(__dirname, '../artifacts');
 export const downloadDirectory = path.join(__dirname, '../downloads');
 
-export function getFfmpegPaths(platform = process.platform, arch = process.arch, suffix = platform === 'win32' ? '.exe' : '') {
-    const filename = `ffmpeg-${platform}-${arch}${suffix}`;
-    const ffmpegPath = path.join(artifactDirectory, filename);
+export function getDenoPaths(platform = process.platform, arch = process.arch, suffix = platform === 'win32' ? '.exe' : '') {
+    const filename = `deno${suffix}`;
+    const denoPath = path.join(artifactDirectory, `${platform}-${arch}`, filename);
 
     return {
         filename,
-        ffmpegPath,
+        denoPath,
     }
 }
 

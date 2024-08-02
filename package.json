@@ -1,6 +1,6 @@
 {
-  "name": "@scrypted/ffmpeg-static",
-  "version": "6.1.0-build1",
+  "name": "@scrypted/deno",
+  "version": "1.45.5",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -9,18 +9,18 @@
     "build": "rimraf dist && tsc",
     "download": "node dist/download.js",
     "release": "npm run build && npm publish --access public",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run build && node dist/test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/scryptedapp/ffmpeg-static.git"
+    "url": "git+https://github.com/scryptedapp/deno.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/scryptedapp/ffmpeg-static/issues"
+    "url": "https://github.com/scryptedapp/deno/issues"
   },
-  "homepage": "https://github.com/scryptedapp/ffmpeg-static#readme",
+  "homepage": "https://github.com/scryptedapp/deno#readme",
   "devDependencies": {
     "@types/adm-zip": "^0.5.5",
     "@types/follow-redirects": "^1.14.4",
